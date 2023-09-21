@@ -88,8 +88,9 @@ class ReminderController extends AppBaseController
 
             return redirect(route('reminders.index'));
         }
+        $users = User::pluck('name', 'id');
 
-        return view('reminders.edit')->with('reminder', $reminder);
+        return view('reminders.edit', compact('reminder', 'users'));
     }
 
     /**
@@ -107,7 +108,7 @@ class ReminderController extends AppBaseController
 
         $reminder = $this->reminderRepository->update($request->all(), $id);
 
-        Flash::success('Reminder updated successfully.');
+        Flash::success('Recordatorio actualizado correctamente.');
 
         return redirect(route('reminders.index'));
     }

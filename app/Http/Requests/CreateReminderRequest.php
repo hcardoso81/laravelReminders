@@ -26,4 +26,9 @@ class CreateReminderRequest extends FormRequest
     {
         return Reminder::$rules;
     }
+
+    public function messages()
+    {
+        return Reminder::$messages;
+    }
 }

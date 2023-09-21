@@ -29,6 +29,15 @@ class Reminder extends Model
         'user_id' => 'required'
     ];
 
+    public static array $messages = [
+        'description.required' => 'El campo Descripción es obligatorio.',
+        'description.max' => 'El campo Descripción no debe superar los 500 caracteres.',
+        'date.required' => 'El campo Fecha es obligatorio.',
+        'time.required' => 'El campo Hora es obligatorio.',
+        'user_id.required' => 'El campo Usuario es obligatorio.'
+    ];
+
+
     public function user()
     {
         return $this->hasOne(User::class, 'id', 'user_id');

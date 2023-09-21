@@ -29,8 +29,8 @@
         </div>
 
         <div class="card-footer d-flex justify-content-center">
-            {!! Form::submit('Save', ['class' => 'btn btn-primary m-2']) !!}
-            <a href="{{ route('reminders.index') }}" class="btn btn-default m-2"> Cancel </a>
+            {!! Form::submit('Guardar', ['class' => 'btn btn-primary m-2']) !!}
+            <a href="{{ route('reminders.index') }}" class="btn btn-default m-2"> Cancelar </a>
         </div>
 
         {!! Form::close() !!}
