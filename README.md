@@ -7,3 +7,11 @@
 ### add adminLTEGenerator
 
 -   https://infyom.com/open-source/laravelgenerator/docs/10.0/installation
+
+-   php artisan infyom:api_scaffold Reminder
+
+### UserSeeder and User Factory
+
+-   php artisan make:seeder UserSeeder
+-   php artisan db:seed
+-   if you want to rollback: php artisan migrate:fresh --seed
