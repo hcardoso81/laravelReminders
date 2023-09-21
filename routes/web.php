@@ -31,5 +31,6 @@ Route::resource('recordatorios', App\Http\Controllers\ReminderController::class)
     'store' => 'reminders.store',
     'show' => 'reminders.show',
     'update' => 'reminders.update',
+    'edit' => 'reminders.edit',
     'destroy' => 'reminders.destroy',
 ]);

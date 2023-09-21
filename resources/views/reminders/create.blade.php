@@ -13,13 +13,12 @@
     </div>
 </section>
 
-<div class="content px-3">
+<div class="content px-3 d-flex justify-content-center">
 
-    @include('adminlte-templates::common.errors')
+    <div class="card w-75">
+        @include('adminlte-templates::common.errors')
 
-    <div class="card">
-
-        {!! Form::open(['route' => 'reminders.store']) !!}
+        {!! Form::open(['route' => 'reminders.store', 'novalidate']) !!}
 
         <div class="card-body">
 
@@ -29,9 +28,9 @@
 
         </div>
 
-        <div class="card-footer">
-            {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-            <a href="{{ route('reminders.index') }}" class="btn btn-default"> Cancel </a>
+        <div class="card-footer d-flex justify-content-center">
+            {!! Form::submit('Save', ['class' => 'btn btn-primary m-2']) !!}
+            <a href="{{ route('reminders.index') }}" class="btn btn-default m-2"> Cancel </a>
         </div>
 
         {!! Form::close() !!}

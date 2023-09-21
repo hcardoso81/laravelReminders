@@ -16,7 +16,7 @@
                     <td>{{ $reminder->description }}</td>
                     <td>{{ $reminder->date }}</td>
                     <td>{{ $reminder->time }}</td>
-                    <td>{{ $reminder->user_id }}</td>
+                    <td>{{ $reminder->user->name }}</td>
                     <td style="width: 120px">
                         {!! Form::open(['route' => ['reminders.destroy', $reminder->id], 'method' => 'delete']) !!}
                         <div class='btn-group'>
