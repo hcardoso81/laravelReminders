@@ -25,4 +25,11 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 
-Route::resource('reminders', App\Http\Controllers\ReminderController::class);
+Route::resource('recordatorios', App\Http\Controllers\ReminderController::class)->names([
+    'index' => 'reminders.index',
+    'create' => 'reminders.create',
+    'store' => 'reminders.store',
+    'show' => 'reminders.show',
+    'update' => 'reminders.update',
+    'destroy' => 'reminders.destroy',
+]);
