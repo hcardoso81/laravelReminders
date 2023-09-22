@@ -7,7 +7,7 @@
                     <th>Fecha</th>
                     <th>Hora</th>
                     <th>Usuario</th>
-                    <th colspan="3">Action</th>
+                    <th colspan="3">Acción</th>
                 </tr>
             </thead>
             <tbody>
@@ -20,14 +20,14 @@
                     <td style="width: 120px">
                         {!! Form::open(['route' => ['reminders.destroy', $reminder->id], 'method' => 'delete']) !!}
                         <div class='btn-group'>
-                            <a href="{{ route('reminders.show', [$reminder->id]) }}" class='btn btn-default btn-xs'>
+                            <a href="{{ route('reminders.show', [$reminder->id]) }}" class='btn btn-default btn-xs m-1'>
                                 <i class="far fa-eye"></i>
                             </a>
-                            <a href="{{ route('reminders.edit', [$reminder->id]) }}" class='btn btn-default btn-xs'>
+                            <a href="{{ route('reminders.edit', [$reminder->id]) }}" class='btn btn-default btn-xs m-1'>
                                 <i class="far fa-edit"></i>
                             </a>
                             {!! Form::button('<i class="far fa-trash-alt"></i>', ['type' => 'submit', 'class' => 'btn
-                            btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                            btn-danger btn-xs m-1', 'onclick' => "return confirm('Estas seguro?')"]) !!}
                         </div>
                         {!! Form::close() !!}
                     </td>

@@ -1,25 +1,25 @@
 <!-- Description Field -->
 <div class="col-sm-12">
-    {!! Form::label('description', 'Description:') !!}
+    {!! Form::label('description', 'Descripción:') !!}
     <p>{{ $reminder->description }}</p>
 </div>
 
 <!-- Date Field -->
 <div class="col-sm-12">
-    {!! Form::label('date', 'Date:') !!}
+    {!! Form::label('date', 'Fecha:') !!}
     <p>{{ $reminder->date }}</p>
 </div>
 
 <!-- Time Field -->
 <div class="col-sm-12">
-    {!! Form::label('time', 'Time:') !!}
+    {!! Form::label('time', 'Hora:') !!}
     <p>{{ $reminder->time }}</p>
 </div>
 
 <!-- User Id Field -->
 <div class="col-sm-12">
-    {!! Form::label('user_id', 'User Id:') !!}
-    <p>{{ $reminder->user_id }}</p>
+    {!! Form::label('user_id', 'Usuario:') !!}
+    <p>{{ $reminder->user->name}}</p>
 </div>
 
 <!-- Created At Field -->
@@ -33,4 +33,3 @@
     {!! Form::label('updated_at', 'Updated At:') !!}
     <p>{{ $reminder->updated_at }}</p>
 </div>
-
