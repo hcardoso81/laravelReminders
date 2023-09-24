@@ -23,3 +23,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::resource('reminders', App\Http\Controllers\API\ReminderAPIController::class)
     ->except(['create', 'edit']);
+
+Route::resource('users', App\Http\Controllers\API\UserAPIController::class)
+    ->except(['create', 'edit']);

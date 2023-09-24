@@ -34,3 +34,5 @@ Route::resource('recordatorios', App\Http\Controllers\ReminderController::class)
     'edit' => 'reminders.edit',
     'destroy' => 'reminders.destroy',
 ]);
+
+Route::resource('users', App\Http\Controllers\UserController::class);
